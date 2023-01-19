@@ -2729,7 +2729,7 @@ The \textbf{Threshold Algorithm} \textit{(or TA)} is a variant of Fagin's algori
         \begin{enumerate}[label=step \arabic*., ref=step (\arabic*), widest*=7, leftmargin=*, labelindent=1em]
           \item\label{enum:threshold-algorithm-1} Do a sorted access in parallel in each list \(R_i\)
           \item For each object \(o\), do random accesses in the other lists \(R_j\), thus obtaining the score \(s_j\)
-          \item Compute the overall score \(S\left( s_1, \,\ldots\, s_m \right)\); if the value is among the \(k\) highest, store it
+          \item Compute the overall score \(S\left( s_1, \,\ldots\, s_m \right)\); if the value is among the \(k\) highest, store \(o\)
           \item Let \(s_{li}\) be the minimum score (the last seen under sorted access) of ranked list \(R_i\)
           \item Define the threshold \(T = S\left( s_{l1}, \,\ldots\, s_{lm} \right)\)
           \item If the score of the \(k\)-th object is less than \(T\), go back to~\ref{enum:threshold-algorithm-1}
